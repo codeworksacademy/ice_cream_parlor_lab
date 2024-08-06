@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Reenie+Beanie&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Ice Cream Parlor</title>
+</head>
+
+<body>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- ANCHOR cart -->
+        <section class="col-md-5 order-2 order-md-1">
+          <div class="p-1">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Qty</th>
+                  <th>Each</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>strawberry</td>
+                  <td>2</td>
+                  <td>$4.00</td>
+                  <td>$8.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <!-- ANCHOR menu -->
+        <section class="col-md-7 order-1 order-md-2">
+          <div class="row">
+            <h2>Ice Cream</h2>
+            <div class="col-6 col-md-4 mb-3">
+              <div class="menu-card" role="button" title="Add 1 scoop of Vanilla to your cart">
+                <img
+                  src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=1912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Vanilla Ice Cream">
+                <p class="mb-0">Vanilla <span class="fs-2">$1.00</span></p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3">
+              <div class="menu-card" role="button" title="Add 1 scoop of Cookie Dough to your cart">
+                <img
+                  src="https://images.unsplash.com/photo-1625234969503-49c7f28bc6ec?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Chocolate Chip Ice Cream">
+                <p class="mb-0">Cookie Dough <span class="fs-2">$1.25</span></p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3">
+              <div class="menu-card" role="button" title="Add 1 scoop of Strawberry to your cart">
+                <img
+                  src="https://images.unsplash.com/photo-1532678465554-94846274c297?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Strawberry Ice Cream">
+                <p class="mb-0">Strawberry <span class="fs-2">$1.25</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

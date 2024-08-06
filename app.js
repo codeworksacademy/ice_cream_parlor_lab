@@ -33,6 +33,23 @@ const toppings = [
     quantity: 0
   }
 ]
+const vessels = [
+  {
+    name: 'Waffle Cone',
+    quantity: 0,
+    price: 3
+  },
+  {
+    name: 'Sprinkle Bowl',
+    price: 7,
+    quantity: 0
+  },
+  {
+    name: 'Cinnamon Roll Bowl',
+    price: 19,
+    quantity: 0
+  }
+]
 
 
 function orderVanilla() {
@@ -55,8 +72,19 @@ function orderTopping(name) {
   drawTotal()
 }
 
-function orderItem() {
+function orderVessel(name) {
+  for (let i = 0; i < vessels.length; i++) {
+    const vessel = vessels[i];
+    if (vessel.name == name) {
+      vessel.quantity = 1
+    }
+    else {
+      vessel.quantity = 0
+    }
+  }
 
+  drawCart()
+  drawTotal()
 }
 
 function drawVanilla() {
@@ -139,6 +167,20 @@ function drawCart() {
     cartContent += cartItemHTML
   }
 
+  const vessel = vessels.find(vessel => vessel.quantity == 1)
+
+  if (vessel) {
+    const vesselHTML = `
+    <tr>
+      <td>${vessel.name}</td>
+      <td>${vessel.quantity}</td>
+      <td>$${vessel.price.toFixed(2)}</td>
+      <td>$${(vessel.price * vessel.quantity).toFixed(2)}</td>
+    <tr>
+  `
+    cartContent += vesselHTML
+  }
+
   const cartElem = document.getElementById('cartItems')
   cartElem.innerHTML = cartContent
 }
@@ -153,6 +195,12 @@ function drawTotal() {
     const topping = toppings[i]
     total += topping.quantity * topping.price
   }
+
+  const vessel = vessels.find(vessel => vessel.quantity == 1)
+  if (vessel) {
+    total += vessel.price * vessel.quantity
+  }
+
   const cartTotalElem = document.getElementById('cartTotal')
   cartTotalElem.innerText = `$${total.toFixed(2)}`
 }
@@ -172,6 +220,11 @@ function checkout() {
   for (let i = 0; i < toppings.length; i++) {
     const topping = toppings[i];
     topping.quantity = 0
+  }
+
+  const vessel = vessels.find(vessel => vessel.quantity == 1)
+  if (vessel) {
+    vessel.quantity = 0
   }
 
   drawCart()

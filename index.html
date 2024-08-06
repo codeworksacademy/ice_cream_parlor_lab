@@ -21,7 +21,7 @@
       <div class="row">
         <!-- ANCHOR cart -->
         <section class="col-md-5 order-2 order-md-1">
-          <div class="p-1">
+          <div class="p-1 p-md-5">
             <table class="table">
               <thead>
                 <tr>
@@ -32,12 +32,6 @@
                 </tr>
               </thead>
               <tbody id="cartItems">
-                <tr>
-                  <td>strawberry</td>
-                  <td>2</td>
-                  <td>$4.00</td>
-                  <td>$8.00</td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -47,7 +41,8 @@
           <div class="row">
             <h2>Ice Cream</h2>
             <div class="col-6 col-md-4 mb-3">
-              <div onclick="orderVanilla()" class="menu-card" role="button" title="Add 1 scoop of Vanilla to your cart">
+              <div onclick="orderIceCream('Vanilla')" class="menu-card" role="button"
+                title="Add 1 scoop of Vanilla to your cart">
                 <img
                   src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=1912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Vanilla Ice Cream">
@@ -55,7 +50,8 @@
               </div>
             </div>
             <div class="col-6 col-md-4 mb-3">
-              <div class="menu-card" role="button" title="Add 1 scoop of Cookie Dough to your cart">
+              <div onclick="orderIceCream('Cookie Dough')" class="menu-card" role="button"
+                title="Add 1 scoop of Cookie Dough to your cart">
                 <img
                   src="https://images.unsplash.com/photo-1625234969503-49c7f28bc6ec?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Chocolate Chip Ice Cream">
@@ -63,7 +59,8 @@
               </div>
             </div>
             <div class="col-6 col-md-4 mb-3">
-              <div class="menu-card" role="button" title="Add 1 scoop of Strawberry to your cart">
+              <div onclick="orderIceCream('Strawberry')" class="menu-card" role="button"
+                title="Add 1 scoop of Strawberry to your cart">
                 <img
                   src="https://images.unsplash.com/photo-1532678465554-94846274c297?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Strawberry Ice Cream">

@@ -28,8 +28,8 @@ const toppings = [
     quantity: 0
   },
   {
-    name: 'Cookie Chunks',
-    price: .5,
+    name: 'Gummy Worms',
+    price: .75,
     quantity: 0
   }
 ]
@@ -58,6 +58,7 @@ function orderIceCream(name) {
   foundIceCream.quantity++
   drawIceCreams()
 }
+
 
 function drawIceCreams() {
   let cartContent = ''

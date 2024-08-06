@@ -41,8 +41,8 @@ function drawVanilla() {
   const tableRowElem = `<tr>
                           <td>${vanilla.name}</td>
                           <td>${vanilla.quantity}</td>
-                          <td>${vanilla.price}</td>
-                          <td>${vanilla.price * vanilla.quantity}</td>
+                          <td>$${vanilla.price.toFixed(2)}</td>
+                          <td>$${(vanilla.price * vanilla.quantity).toFixed(2)}</td>
                         <tr>`
 
   const cartTableBody = document.getElementById('cartItems')
